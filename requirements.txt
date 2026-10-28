@@ -1,0 +1,9 @@
+# Requirements for AI Protector
+fastapi
+uvicorn[standard]
+sqlmodel
+pydantic
+requests
+# optional for Nebius integration
+envparse
+

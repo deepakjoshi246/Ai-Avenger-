@@ -1,0 +1,8 @@
+/* Minimal global overrides — the bulk of styling is inline in App.js */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+button { transition: opacity 0.15s; }
+button:hover:not(:disabled) { opacity: 0.85; }
+a { color: #58a6ff; text-decoration: none; }
+

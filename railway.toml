@@ -1,0 +1,14 @@
+# railway.toml — Railway deployment config for AI Protector
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+
+[environments.production.variables]
+NEMOTRON_MODEL = "nvidia/Llama-3.1-Nemotron-70B-Instruct"
+# Set NEBIUS_API_KEY in the Railway dashboard — do NOT put it here
